@@ -3,71 +3,55 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f7f8fa">
-    <title>Arxiv — Research Search</title>
+    <meta name="theme-color" content="#ffffff">
+    <title>arXiv Paper Search</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script src="{{ url_for('static', filename='app.js') }}" defer></script>
   </head>
   <body>
-    <header class="topbar">
-      <a class="brand" href="/" aria-label="Arxiv home">
-        <span class="brand-mark" aria-hidden="true">a</span>
-        <span>arxiv<span class="brand-dot">.</span></span>
-      </a>
-      <div class="topbar-note"><span class="status-dot"></span> Research index online</div>
+    <header class="site-header">
+      <a class="brand" href="/">arXiv Paper Search</a>
+      <span id="corpus-count" class="corpus-count">Loading index…</span>
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="page-title">
-        <p class="eyebrow"><span class="eyebrow-line"></span> THE OPEN RESEARCH INDEX</p>
-        <h1 id="page-title">Find the paper<br>that <em>moves you forward.</em></h1>
-        <p class="hero-copy">Explore arXiv research with relevance-ranked search across titles and abstracts.</p>
+      <section class="search-section" aria-labelledby="page-title">
+        <h1 id="page-title">Search research papers</h1>
+        <p>Find arXiv papers by title or abstract.</p>
 
-        <form id="search-form" class="search-panel">
+        <form id="search-form" class="search-form">
           <label class="sr-only" for="query">Search papers</label>
-          <span class="search-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><circle cx="10.8" cy="10.8" r="6.7"></circle><path d="m16 16 4.5 4.5"></path></svg>
-          </span>
           <input id="query" name="q" type="search" maxlength="300" autocomplete="off"
-            placeholder="Try “graph neural networks” or “quantum field theory”">
-          <button class="search-button" type="submit">Search papers <span aria-hidden="true">↗</span></button>
+            placeholder="For example: graph neural networks">
+          <button type="submit">Search</button>
         </form>
 
         <div class="filters">
-          <label class="filter-label" for="category">FILTER BY</label>
+          <label for="category">Category</label>
           <select id="category" name="category">
             <option value="">All categories</option>
           </select>
-          <span class="filter-divider" aria-hidden="true"></span>
-          <label class="sr-only" for="limit">Number of results</label>
+          <label for="limit">Results</label>
           <select id="limit" name="limit">
-            <option value="10">10 results</option>
-            <option value="20">20 results</option>
-            <option value="30">30 results</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
           </select>
-          <span id="corpus-count" class="corpus-count">Loading index…</span>
         </div>
       </section>
 
       <section class="results-section" aria-live="polite" aria-busy="false">
         <div class="results-heading">
-          <div>
-            <p class="eyebrow results-eyebrow">YOUR NEXT DISCOVERY</p>
-            <h2 id="results-title">Search the literature</h2>
-          </div>
+          <h2 id="results-title">Search the collection</h2>
           <span id="results-count" class="results-count"></span>
         </div>
         <div id="message" class="message">
-          <span class="message-icon" aria-hidden="true">↳</span>
-          <span>Enter a topic, method, or phrase to explore the collection.</span>
+          <span>Enter a topic or phrase to see matching papers.</span>
         </div>
         <div id="results" class="results-list"></div>
       </section>
     </main>
 
-    <footer class="footer">
-      <span>Built for curious minds.</span>
-      <span>Powered by TF-IDF · Cosine similarity · arXiv</span>
-    </footer>
+    <footer>Results are ranked with TF-IDF and cosine similarity. Paper links open on arXiv.</footer>
   </body>
 </html>

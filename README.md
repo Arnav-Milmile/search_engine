@@ -36,6 +36,10 @@ python step4_ablation.py
 
 These scripts generate the inverted index and evaluation chart and print search metrics and the ablation study to the terminal. `step2_inverted_index.py` is an alternate standalone inverted-index builder.
 
+## Repository copy
+
+See [transfer.md](transfer.md) for the repository-copy and GitHub setup notes.
+
 ## Project files
 
 - `app.py` — Flask API and search index
