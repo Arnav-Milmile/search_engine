@@ -11,15 +11,16 @@ The repository has been created and the current project history, including the s
 
 ## Included
 
-The copy contains the Flask search app, its browser assets, the arXiv sample downloader, the indexing and evaluation scripts, the refreshed inverted index and charts, and setup documentation. The sample CSV is intentionally ignored by Git; download it after cloning:
+The copy contains the Flask search app, its browser assets, the arXiv sample dataset and downloader, the indexing and evaluation scripts, the refreshed inverted index and charts, and setup documentation. The `.venv` virtual environment is excluded. To run the app after cloning:
 
 ```powershell
 python -m pip install -r requirements.txt
-python download_arxiv_sample.py
 python app.py
 ```
 
 Then open <http://127.0.0.1:5000>.
+
+Run `python download_arxiv_sample.py` only if you want to refresh the included sample from arXiv.
 
 ## Keep the copy updated
 

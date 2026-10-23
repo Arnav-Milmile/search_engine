@@ -4,3 +4,4 @@
 venv/
 .venv/
 *.csv
+!arxiv_sample.csv

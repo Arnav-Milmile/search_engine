@@ -9,14 +9,13 @@ A TF-IDF search engine for arXiv abstracts, with a browser-based search interfac
 
 ## Setup
 
-Install the dependencies and download a 10,000-paper sample from the public arXiv API:
+Install the dependencies:
 
 ```powershell
 python -m pip install -r requirements.txt
-python download_arxiv_sample.py
 ```
 
-The CSV is generated locally and is intentionally excluded from Git.
+The repository includes a 10,000-paper arXiv sample. To refresh it from the public arXiv API, run `python download_arxiv_sample.py`.
 
 ## Run the frontend
 
