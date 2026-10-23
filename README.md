@@ -39,11 +39,16 @@ These scripts generate the inverted index and evaluation chart and print search 
 
 See [transfer.md](transfer.md) for the repository-copy and GitHub setup notes.
 
+## Project presentation
+
+The detailed 15-slide project deck is available as [project_presentation.pptx](project_presentation.pptx).
+
 ## Project files
 
 - `app.py` — Flask API and search index
 - `templates/index.html`, `static/` — browser interface
 - `download_arxiv_sample.py` — downloads a local arXiv sample
+- `project_presentation.pptx` — detailed project overview and evaluation
 - `step1_prepare_data.py` — builds an inverted index and term-frequency chart
 - `step3_search_engine.py` — evaluates search and Rocchio feedback
 - `step4_ablation.py` — compares preprocessing configurations

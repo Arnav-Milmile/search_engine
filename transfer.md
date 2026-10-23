@@ -11,7 +11,7 @@ The repository has been created and the current project history, including the s
 
 ## Included
 
-The copy contains the Flask search app, its browser assets, the arXiv sample dataset and downloader, the indexing and evaluation scripts, the refreshed inverted index and charts, and setup documentation. The `.venv` virtual environment is excluded. To run the app after cloning:
+The copy contains the Flask search app, its browser assets, the arXiv sample dataset and downloader, the indexing and evaluation scripts, the refreshed inverted index and charts, the detailed PowerPoint presentation, and setup documentation. The `.venv` virtual environment is excluded. To run the app after cloning:
 
 ```powershell
 python -m pip install -r requirements.txt
